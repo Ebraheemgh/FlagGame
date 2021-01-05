@@ -6,8 +6,8 @@
 </head>
 
 <body>
-    <div class="theGame">
-        <button class="button">Exit</button>
+    <div class="theGame" id="theGame">
+        <button class="button" id="exitButton">Exit</button>
 
         <div class="basicGame">
             <img id="flagImg" src="https://media.istockphoto.com/vectors/flags-of-the-world-big-set-of-36-world-flags-icons-brazil-usa-flag-vector-id1147573966">
@@ -19,15 +19,14 @@
             <label id="score"></label>
         </div>
     </div>
-    <script src="./app.js"></script>
     <center>
-        <div class="home">
+        <div id="home">
 
             <h1>welcome to the flag's game</h1>
 
-            <form onsubmit="myFunction()" class="playButton">
-                <input type="submit" class="margintheinput" value="play">
-            </form>
+
+            <button id="playButton" class="margintheinput button">play</button>
+
 
             <script>
                 function myFunction() {
@@ -36,7 +35,7 @@
             </script>
 
             <form onsubmit="alertRulesFunction()" class="anotherButtons">
-                <input type="submit" class="margintheinput" value="rules">
+                <input type="submit" class="margintheinput button" value="rules">
             </form>
 
             <script>
@@ -46,9 +45,17 @@
             </script>
 
 
-            <script src="app.js"></script>
+
         </div>
     </center>
+    <div id="finalScore">
+        <h1 id="h1Score"></h1><br>
+        <div class="theButtons">
+            <button class="button" id="playAgainButton"> Play Again</button>
+            <button class="button" id="homeButton">Home </button>
+        </div>
+    </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
