@@ -2,12 +2,41 @@
 <html lang="en">
 
 <head>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <center>
+    <div class="home">
+
+        <h1>welcome to the flag's game</h1>
+
+        <form onsubmit="myFunction()" class="playButton">
+            <input type="submit" class="margintheinput" value="play">
+        </form>
+
+        <script>
+            function myFunction() 
+            {
+                alert("are you ready to start the game ?");
+            }
+        </script>
+
+        <form onsubmit="alertRulesFunction()" class="anotherButtons">
+            <input type="submit" class="margintheinput" value="rules">
+        </form>
+
+        <script>
+            function alertRulesFunction() 
+            {
+                alert("you can't write abbreviation \n" + "you have only one attempt in each level\n" + "you must write the first letter in the world in capital letter");
+            }
+        </script>
+
 
 <script src="app.js"></script>
+    </div>
+</center>
 </body>
 
 </html>
