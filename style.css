@@ -1,0 +1,58 @@
+.theGame {
+    display: flex;
+    flex-direction: column;
+}
+
+.button {
+    background-color: white;
+    border: 2px solid #008CBA;
+    text-align: center;
+    font-size: 16px;
+    padding: auto;
+    width: 150px;
+    height: 50px;
+}
+
+.button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
+img {
+    width: 30%;
+    ;
+}
+
+.input-label {
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 40px;
+}
+
+.flagInput {
+    padding: 2px 5px;
+    font-weight: bold;
+    font-size: 25px;
+    border-radius: 5px;
+    width: 30%;
+    border: 2px solid #008CBA;
+}
+
+.basicGame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.submitButton {
+    margin-top: 10px;
+}
+
+.correct {
+    border: 5px solid green;
+}
+
+.notCorrect {
+    border: 5px solid red;
+}

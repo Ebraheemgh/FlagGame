@@ -2,11 +2,24 @@
 <html lang="en">
 
 <head>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="theGame">
+        <button class="button">Exit</button>
 
+        <div class="basicGame">
+            <img id="flagImg" src="https://media.istockphoto.com/vectors/flags-of-the-world-big-set-of-36-world-flags-icons-brazil-usa-flag-vector-id1147573966">
+            <label for="textInput" class="input-label">
+                Flag Name?
+            </label>
+            <input type="text" id="theAnswer" class="flagInput">
+            <button class="button submitButton" id="submitB">Submit</button>
+            <label id="score"></label>
+        </div>
+    </div>
+    <script src="./app.js"></script>
 </body>
 
 </html>
