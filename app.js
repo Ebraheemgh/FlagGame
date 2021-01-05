@@ -8,13 +8,13 @@ let Countries = [{
         FlagImg: " https://www.worldometers.info/img/flags/small/tn_ag-flag.gif ",
     },
     {
-        CountryName: "Andorra",
-        FlagImg: " https://www.worldometers.info/img/flags/small/tn_an-flag.gif ",
+        CountryName: "Bahrain",
+        FlagImg: " https://www.worldometers.info/img/flags/small/tn_ba-flag.gif",
     },
 
     {
-        CountryName: "Angola",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_ao-flag.gif  ",
+        CountryName: "Croatia",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_hr-flag.gif ",
     },
 
     {
@@ -23,8 +23,8 @@ let Countries = [{
     },
 
     {
-        CountryName: "Armenia",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_am-flag.gif  ",
+        CountryName: "Portugal",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_po-flag.gif ",
     },
 
     {
@@ -38,13 +38,13 @@ let Countries = [{
     },
 
     {
-        CountryName: "Azerbaijan",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_aj-flag.gif  ",
+        CountryName: "Canada",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_ca-flag.gif",
     },
 
     {
-        CountryName: "Bahamas",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_bf-flag.gif  ",
+        CountryName: "Egypt",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_eg-flag.gif ",
     },
 
     {
@@ -53,18 +53,18 @@ let Countries = [{
     },
 
     {
-        CountryName: "Bangladesh",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_bg-flag.gif  ",
+        CountryName: "France",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_fr-flag.gif ",
     },
 
     {
-        CountryName: "Barbados",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_bb-flag.gif  ",
+        CountryName: "Germany",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_gm-flag.gif  ",
     },
 
     {
-        CountryName: "Belarus",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_bo-flag.gif  ",
+        CountryName: "Greece",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_gr-flag.gif ",
     },
 
     {
@@ -73,23 +73,23 @@ let Countries = [{
     },
 
     {
-        CountryName: "Belize",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_bh-flag.gif  ",
+        CountryName: "India",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_in-flag.gif ",
     },
 
     {
-        CountryName: "Benin",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_bn-flag.gif  ",
+        CountryName: "Italy",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_it-flag.gif ",
     },
 
     {
-        CountryName: "Bolivia",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_bl-flag.gif  ",
+        CountryName: "Japan",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_ja-flag.gif ",
     },
 
     {
-        CountryName: "Botswana",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_bc-flag.gif  ",
+        CountryName: "Jordan",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_jo-flag.gif ",
     },
 
     {
@@ -98,8 +98,8 @@ let Countries = [{
     },
 
     {
-        CountryName: "Brunei",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_bx-flag.gif   ",
+        CountryName: "Kuwait",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_ku-flag.gif  ",
     },
 
     {
@@ -108,18 +108,18 @@ let Countries = [{
     },
 
     {
-        CountryName: "Burkina Faso",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_uv-flag.gif   ",
+        CountryName: "Lebanon",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_le-flag.gif  ",
     },
 
     {
-        CountryName: "Burundi",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_by-flag.gif  ",
+        CountryName: "Mexico",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_mx-flag.gif ",
     },
 
     {
-        CountryName: "Cambodia",
-        FlagImg: "https://www.worldometers.info/img/flags/small/tn_cb-flag.gif  ",
+        CountryName: "Morocco",
+        FlagImg: "https://www.worldometers.info/img/flags/small/tn_mo-flag.gif  ",
     },
 
     {
