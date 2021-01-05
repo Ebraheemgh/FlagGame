@@ -1,4 +1,4 @@
-let Countrys = [
+let Countries = [
     {
       CountryName: "Israel",
       FlagImg:"https://www.worldometers.info/img/flags/small/tn_is-flag.gif",    
@@ -117,7 +117,5 @@ let Countrys = [
     {
         CountryName: "Denmark",
         FlagImg:"https://www.worldometers.info/img/flags/small/tn_da-flag.gif   ",},
-
-
    
   ]
