@@ -1,6 +1,7 @@
 .theGame {
     flex-direction: column;
     display: none;
+    margin-top: 0px;
 }
 
 .button {
@@ -43,7 +44,7 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 15px;
 }
 
 .submitButton {
