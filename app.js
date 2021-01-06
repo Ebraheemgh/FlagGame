@@ -146,12 +146,27 @@ let Countries = [{
         FlagImg: "https://www.worldometers.info/img/flags/small/tn_da-flag.gif   ",
     },
 
-]
+]; // array of objects that contain the flag picture url and the country name.
 
-let rand;
-let flagName;
-let flagImg;
-let score = 0;
+
+let rand; // variable to store in it the random number.
+let flagName; //variable that store in it the flage name;
+let flagImg; // variable to store in it the url of the img;
+let score = 0; //deleare the score of the player;
+
+document.getElementById("playButton").addEventListener('click', function(event) {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("theGame").style.display = "flex";
+    document.title = " The Game"
+
+}); // listiner to the play button that hide the dic of the home and show the div of the game.
+
+
+function alertRulesFunction() {
+    alert("you can't write abbreviation \n" + "you have only one attempt in each level\n");
+} // alert to show you the rules of the game
+
+
 
 function getFlag() {
     rand = Math.floor(Math.random() * Countries.length);
@@ -160,35 +175,30 @@ function getFlag() {
     flagName = Countries[rand].CountryName;
     document.getElementById("score").textContent = "your score is " + score;
     document.getElementById("theAnswer").className = document.getElementById("theAnswer").className.replace(" correct", "");
+    document.getElementById("theAnswer").className = document.getElementById("theAnswer").className.replace(" notCorrect", "");
     document.getElementById("theAnswer").value = "";
-}
+} // function that give us a random flag from the array
 getFlag();
 
 
 document.getElementById("submitB").addEventListener('click', (event) => {
-
-    if (document.getElementById("theAnswer").value === flagName) {
-        document.getElementById("theAnswer").className = document.getElementById("theAnswer").className.replace(" notCorrect", "");
+    if ((document.getElementById("theAnswer").value).toLowerCase() === flagName.toLowerCase()) {
         document.getElementById("theAnswer").className = document.getElementById("theAnswer").className + " correct";
         score += 5;
         setTimeout(function() {
             getFlag();
-        }, 3000)
+        }, 1000)
 
     } else {
         document.getElementById("theAnswer").className = document.getElementById("theAnswer").className + " notCorrect";
-        document.getElementById("theGame").style.display = "none";
-        document.getElementById("finalScore").style.display = "flex";
-        document.getElementById("h1Score").textContent = "Your Score is : " + score;
-
-
+        setTimeout(function() {
+            document.getElementById("theGame").style.display = "none";
+            document.getElementById("finalScore").style.display = "flex";
+            document.getElementById("h1Score").textContent = "Your Score is : " + score;
+        }, 1000)
     }
-})
-document.getElementById("playButton").addEventListener('click', function(event) {
-    document.getElementById("home").style.display = "none";
-    document.getElementById("theGame").style.display = "flex";
+});
 
-})
 
 document.getElementById("playAgainButton").addEventListener('click', (event) => {
     score = 0;
@@ -198,14 +208,9 @@ document.getElementById("playAgainButton").addEventListener('click', (event) => 
 })
 
 document.getElementById("homeButton").addEventListener('click', (event) => {
-    score = 0;
-    document.getElementById("home").style.display = "inline";
-    document.getElementById("finalScore").style.display = "none";
+    location.reload();
 })
 
 document.getElementById("exitButton").addEventListener('click', (event) => {
-    score = 0;
-    getFlag();
-    document.getElementById("home").style.display = "inline";
-    document.getElementById("theGame").style.display = "none";
+    location.reload();
 })
