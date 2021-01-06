@@ -14,7 +14,7 @@ document.getElementById("playButton").addEventListener('click', function(event) 
 
 
 function alertRulesFunction() {
-    alert("you can't write abbreviation \n" + "you have only one attempt in each level\n" + "you have only 10 second for each flag");
+    alert("you can't write abbreviation \n" + "you have only one attempt in each level\n" + "you have only 15 second for each flag");
 } // alert to show you the rules of the game
 
 document.getElementById("rulesButton").addEventListener("click", (event) => {
