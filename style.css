@@ -27,6 +27,7 @@ img {
     font-size: 25px;
     font-weight: bold;
     margin-top: 40px;
+    color: rgb(255, 157, 0);
 }
 
 .flagInput {
@@ -58,7 +59,7 @@ img {
 }
 
 h1 {
-    color: rgb(68, 62, 126);
+    color: rgb(255, 254, 248);
 }
 
 #home {
@@ -70,6 +71,7 @@ h1 {
     align-items: center;
     flex-direction: column;
     width: 100%;
+    justify-content: space-around;
 }
 
 .playButton,
@@ -78,13 +80,7 @@ h1 {
 }
 
 .margintheinput {
-    width: 70px;
-    margin: 60px;
-}
-
-.margintheinput:hover {
-    cursor: pointer;
-    background-color: rgb(199, 68, 68);
+    margin: 3%;
 }
 
 #finalScore {
@@ -100,8 +96,26 @@ h1 {
     color: green;
     background: honeydew;
     border: 3px solid green;
+    padding: 15px;
+}
+
+#score {
+    font-size: x-large;
+    margin-top: 15px;
+    padding: 10px;
+    border: 3px solid gray;
+    background: honeydew;
 }
 
 body {
     background-image: url("https://blog.thevoiceofnation.com/wp-content/uploads/2015/11/usa.jpg");
+}
+
+@media only screen and (max-width: 600px) {
+    img {
+        width: 80%;
+    }
+    #theAnswer {
+        width: 80%;
+    }
 }

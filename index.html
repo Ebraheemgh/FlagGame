@@ -3,9 +3,28 @@
 
 <head>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>home</title>
 </head>
 
 <body>
+    <center>
+        <div id="home">
+
+            <h1>welcome to the flag's game</h1>
+
+            <button id="playButton" class="margintheinput button">play</button>
+
+            <form onsubmit="alertRulesFunction()" class="anotherButtons">
+                <input type="submit" class="margintheinput button" value="rules">
+            </form>
+
+
+
+        </div>
+    </center>
+
+
     <div class="theGame" id="theGame">
         <button class="button" id="exitButton">Exit</button>
 
@@ -19,35 +38,7 @@
             <label id="score"></label>
         </div>
     </div>
-    <center>
-        <div id="home">
 
-            <h1>welcome to the flag's game</h1>
-
-
-            <button id="playButton" class="margintheinput button">play</button>
-
-
-            <script>
-                function myFunction() {
-                    alert("are you ready to start the game ?");
-                }
-            </script>
-
-            <form onsubmit="alertRulesFunction()" class="anotherButtons">
-                <input type="submit" class="margintheinput button" value="rules">
-            </form>
-
-            <script>
-                function alertRulesFunction() {
-                    alert("you can't write abbreviation \n" + "you have only one attempt in each level\n" + "you must write the first letter in the world in capital letter");
-                }
-            </script>
-
-
-
-        </div>
-    </center>
     <div id="finalScore">
         <h1 id="h1Score"></h1><br>
         <div class="theButtons">
