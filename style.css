@@ -111,6 +111,15 @@ body {
     background-image: url("https://blog.thevoiceofnation.com/wp-content/uploads/2015/11/usa.jpg");
 }
 
+#TimeOut {
+    position: absolute;
+    background-color: darkgray;
+    color: red;
+    display: none;
+    border: 2px red solid;
+    padding: 3px;
+}
+
 @media only screen and (max-width: 600px) {
     img {
         width: 80%;

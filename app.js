@@ -157,28 +157,32 @@ let score = 0; //deleare the score of the player;
 document.getElementById("playButton").addEventListener('click', function(event) {
     document.getElementById("home").style.display = "none";
     document.getElementById("theGame").style.display = "flex";
-    document.title = " The Game"
+    document.title = " The Game";
+    getFlag();
 
 }); // listiner to the play button that hide the dic of the home and show the div of the game.
 
 
 function alertRulesFunction() {
-    alert("you can't write abbreviation \n" + "you have only one attempt in each level\n");
+    alert("you can't write abbreviation \n" + "you have only one attempt in each level\n" + "you have only 10 second for each flag");
 } // alert to show you the rules of the game
 
-
+document.getElementById("rulesButton").addEventListener("click", (event) => {
+    alertRulesFunction();
+})
 
 function getFlag() {
+    document.getElementById("TimeOut").style.display = "none";
+    document.getElementById("theAnswer").disabled = false;
     rand = Math.floor(Math.random() * Countries.length);
-
     flagImg = document.getElementById("flagImg").src = Countries[rand].FlagImg;
     flagName = Countries[rand].CountryName;
     document.getElementById("score").textContent = "your score is " + score;
     document.getElementById("theAnswer").className = document.getElementById("theAnswer").className.replace(" correct", "");
     document.getElementById("theAnswer").className = document.getElementById("theAnswer").className.replace(" notCorrect", "");
     document.getElementById("theAnswer").value = "";
+    startCount();
 } // function that give us a random flag from the array
-getFlag();
 
 
 document.getElementById("submitB").addEventListener('click', (event) => {
@@ -214,3 +218,27 @@ document.getElementById("homeButton").addEventListener('click', (event) => {
 document.getElementById("exitButton").addEventListener('click', (event) => {
     location.reload();
 })
+
+function startCount() {
+    let f = 10;
+    let i;
+    for (i = 10; i >= 0; i--) {
+
+        setTimeout(() => {
+            document.getElementById("timer").textContent = "" + f;
+            if (f === 0) {
+                document.getElementById("TimeOut").style.display = "inline";
+                document.getElementById("theAnswer").disabled = true;
+                setTimeout(() => {
+                    document.getElementById("theGame").style.display = "none";
+                    document.getElementById("finalScore").style.display = "flex";
+                    document.getElementById("h1Score").textContent = "Your Score is : " + score;
+                }, 1500);
+            }
+            f--;
+        }, 1000 * i);
+
+    }
+
+
+}
