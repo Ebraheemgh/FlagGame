@@ -42,6 +42,9 @@ document.getElementById("submitB").addEventListener('click', (event) => {
     if ((document.getElementById("theAnswer").value).toLowerCase() === flagName.toLowerCase()) {
         document.getElementById("theAnswer").className = document.getElementById("theAnswer").className + " correct";
         score += 5;
+        new Audio('456161__bwg2020__correct.wav').play();;
+
+
         setTimeout(function() {
             clearInterval(timer);
             getFlag();
@@ -52,6 +55,7 @@ document.getElementById("submitB").addEventListener('click', (event) => {
         document.getElementById("theAnswer").className = document.getElementById("theAnswer").className + " notCorrect";
         document.getElementById("theAnswer").disabled = true;
         document.getElementById("submitB").disabled = true;
+        new Audio('150879__nenadsimic__jazzy-chords.wav').play();;
         setTimeout(function() {
             document.getElementById("theGame").style.display = "none";
             document.getElementById("finalScore").style.display = "flex";
