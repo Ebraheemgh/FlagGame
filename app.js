@@ -3,10 +3,14 @@ let flagName; //variable that store in it the flage name;
 let flagImg; // variable to store in it the url of the img;
 let score = 0; //deleare the score of the player;
 var timer;
+const theAnswerInput = document.getElementById("theAnswer");
+const theGameDiv = document.getElementById("theGame");
+const submitButton = document.getElementById("submitB");
+const finalScoreDiv = document.getElementById("finalScore");
 
 document.getElementById("playButton").addEventListener('click', function(event) {
     document.getElementById("home").style.display = "none";
-    document.getElementById("theGame").style.display = "flex";
+    theGameDiv.style.display = "flex";
     document.title = " The Game";
     getFlag();
 
@@ -25,26 +29,24 @@ function getFlag() {
     clearInterval(timer);
     document.getElementById("timer").textContent = "" + 15;
     document.getElementById("TimeOut").style.display = "none";
-    document.getElementById("theAnswer").disabled = false;
-    document.getElementById("submitB").disabled = false;
+    theAnswerInput.disabled = false;
+    submitButton.disabled = false;
     rand = Math.floor(Math.random() * Countries.length);
     flagImg = document.getElementById("flagImg").src = Countries[rand].FlagImg;
     flagName = Countries[rand].CountryName;
     document.getElementById("score").textContent = "your score is " + score;
-    document.getElementById("theAnswer").className = document.getElementById("theAnswer").className.replace(" correct", "");
-    document.getElementById("theAnswer").className = document.getElementById("theAnswer").className.replace(" notCorrect", "");
-    document.getElementById("theAnswer").value = "";
+    theAnswerInput.className = theAnswerInput.className.replace(" correct", "");
+    theAnswerInput.className = theAnswerInput.className.replace(" notCorrect", "");
+    theAnswerInput.value = "";
     startCount();
 } // function that give us a random flag from the array
 
 
-document.getElementById("submitB").addEventListener('click', (event) => {
-    if ((document.getElementById("theAnswer").value).toLowerCase().trim() === flagName.toLowerCase()) {
-        document.getElementById("theAnswer").className = document.getElementById("theAnswer").className + " correct";
+submitButton.addEventListener('click', (event) => {
+    if ((theAnswerInput.value).toLowerCase().trim() === flagName.toLowerCase()) {
+        theAnswerInput.className = theAnswerInput.className + " correct";
         score += 5;
         new Audio('456161__bwg2020__correct.wav').play();
-
-
         setTimeout(function() {
             clearInterval(timer);
             getFlag();
@@ -52,13 +54,13 @@ document.getElementById("submitB").addEventListener('click', (event) => {
         }, 1000)
 
     } else {
-        document.getElementById("theAnswer").className = document.getElementById("theAnswer").className + " notCorrect";
-        document.getElementById("theAnswer").disabled = true;
-        document.getElementById("submitB").disabled = true;
+        theAnswerInput.className = theAnswerInput.className + " notCorrect";
+        theAnswerInput.disabled = true;
+        submitButton.disabled = true;
         new Audio('150879__nenadsimic__jazzy-chords.wav').play();;
         setTimeout(function() {
-            document.getElementById("theGame").style.display = "none";
-            document.getElementById("finalScore").style.display = "flex";
+            theGameDiv.style.display = "none";
+            finalScoreDiv.style.display = "flex";
             document.getElementById("h1Score").textContent = "Your Score is : " + score;
 
         }, 1500)
@@ -69,8 +71,8 @@ document.getElementById("submitB").addEventListener('click', (event) => {
 document.getElementById("playAgainButton").addEventListener('click', (event) => {
     score = 0;
     getFlag();
-    document.getElementById("theGame").style.display = "flex";
-    document.getElementById("finalScore").style.display = "none";
+    theGameDiv.style.display = "flex";
+    finalScoreDiv.style.display = "none";
 })
 
 document.getElementById("homeButton").addEventListener('click', (event) => {
@@ -89,11 +91,11 @@ function startCount() {
             document.getElementById("TimeOut").style.display = "inline";
 
             clearInterval(timer);
-            document.getElementById("theAnswer").disabled = true;
-            document.getElementById("submitB").disabled = true;
+            theAnswerInput.disabled = true;
+            submitButton.disabled = true;
             setTimeout(function() {
-                document.getElementById("theGame").style.display = "none";
-                document.getElementById("finalScore").style.display = "flex";
+                theGameDiv.style.display = "none";
+                finalScoreDiv.style.display = "flex";
                 document.getElementById("h1Score").textContent = "Your Score is : " + score;
 
             }, 1500)
