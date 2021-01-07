@@ -53,6 +53,7 @@ function getFlag() {
 
 
 submitButton.addEventListener('click', (event) => {
+    clearInterval(timer);
     if ((theAnswerInput.value).toLowerCase().trim() === flagName.toLowerCase()) {
         theAnswerInput.className = theAnswerInput.className + " correct";
         score += 5;
