@@ -16,6 +16,16 @@ document.getElementById("playButton").addEventListener('click', function(event) 
 
 }); // listiner to the play button that hide the dic of the home and show the div of the game.
 
+function addHighScore() {
+    var HighScore = localStorage.getItem('HighScore');
+    console.log(HighScore);
+    if (HighScore) {
+        if (score > HighScore) { localStorage.setItem('HighScore', score); }
+    } else {
+        localStorage.setItem('HighScore', score);
+    }
+    document.getElementById("HighScore").textContent = "High Score is " + localStorage.getItem('HighScore');
+}
 
 function alertRulesFunction() {
     alert("you can't write word shortcut \n" + "you have only one attempt in each level\n" + "you have only 15 second for each flag");
@@ -62,14 +72,7 @@ submitButton.addEventListener('click', (event) => {
             theGameDiv.style.display = "none";
             finalScoreDiv.style.display = "flex";
             document.getElementById("h1Score").textContent = "Your Score is : " + score;
-            var HighScore = localStorage.getItem('HighScore');
-            console.log(HighScore);
-            if (HighScore != null) {
-                if (score > HighScore) { localStorage.setItem('HighScore', score); }
-            } else {
-                localStorage.setItem('HighScore', score);
-            }
-            document.getElementById("HighScore").textContent = "High Score is " + localStorage.getItem('HighScore');
+            addHighScore()
         }, 1500)
     }
 });
@@ -104,7 +107,7 @@ function startCount() {
                 theGameDiv.style.display = "none";
                 finalScoreDiv.style.display = "flex";
                 document.getElementById("h1Score").textContent = "Your Score is : " + score;
-
+                addHighScore();
             }, 1500)
         }
         f--;
