@@ -39,10 +39,10 @@ function getFlag() {
 
 
 document.getElementById("submitB").addEventListener('click', (event) => {
-    if ((document.getElementById("theAnswer").value).toLowerCase() === flagName.toLowerCase()) {
+    if ((document.getElementById("theAnswer").value).toLowerCase().trim() === flagName.toLowerCase()) {
         document.getElementById("theAnswer").className = document.getElementById("theAnswer").className + " correct";
         score += 5;
-        new Audio('456161__bwg2020__correct.wav').play();;
+        new Audio('456161__bwg2020__correct.wav').play();
 
 
         setTimeout(function() {

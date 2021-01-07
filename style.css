@@ -110,6 +110,12 @@ h1 {
 
 body {
     background-image: url("https://blog.thevoiceofnation.com/wp-content/uploads/2015/11/usa.jpg");
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+
 }
 
 #TimeOut {
