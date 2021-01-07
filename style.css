@@ -100,6 +100,13 @@ h1 {
     padding: 15px;
 }
 
+#HighScore {
+    color: rgb(68, 70, 68);
+    background: honeydew;
+    border: 3px solid rgb(68, 70, 68);
+    padding: 15px;
+}
+
 #score {
     font-size: x-large;
     margin-top: 15px;
@@ -110,12 +117,11 @@ h1 {
 
 body {
     background-image: url("https://blog.thevoiceofnation.com/wp-content/uploads/2015/11/usa.jpg");
-    background-position: center; 
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     width: 100vw;
-
 }
 
 #TimeOut {

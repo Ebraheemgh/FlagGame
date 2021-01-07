@@ -35,8 +35,8 @@ function getFlag() {
     flagImg = document.getElementById("flagImg").src = Countries[rand].FlagImg;
     flagName = Countries[rand].CountryName;
     document.getElementById("score").textContent = "your score is " + score;
-    theAnswerInput.className = theAnswerInput.className.replace(" correct", "");
-    theAnswerInput.className = theAnswerInput.className.replace(" notCorrect", "");
+    theAnswerInput.className = theAnswerInput.className.replace("correct", "");
+    theAnswerInput.className = theAnswerInput.className.replace("notCorrect", "");
     theAnswerInput.value = "";
     startCount();
 } // function that give us a random flag from the array
@@ -62,7 +62,14 @@ submitButton.addEventListener('click', (event) => {
             theGameDiv.style.display = "none";
             finalScoreDiv.style.display = "flex";
             document.getElementById("h1Score").textContent = "Your Score is : " + score;
-
+            var HighScore = localStorage.getItem('HighScore');
+            console.log(HighScore);
+            if (HighScore != null) {
+                if (score > HighScore) { localStorage.setItem('HighScore', score); }
+            } else {
+                localStorage.setItem('HighScore', score);
+            }
+            document.getElementById("HighScore").textContent = "High Score is " + localStorage.getItem('HighScore');
         }, 1500)
     }
 });
